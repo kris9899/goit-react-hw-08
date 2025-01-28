@@ -10,13 +10,13 @@
   width: 300px;
   background-color: blanchedalmond;
 }
-.formWrapper {
+.formWrap {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 2px;
 }
-.formLabel {
+.fieldLabel {
   display: flex;
   align-self: flex-start;
   font-size: 16px;
@@ -24,7 +24,7 @@
   margin-top: 8px;
   color: blue;
 }
-.formField {
+.field {
   padding-left: 12px;
   width: 250px;
   height: 30px;
@@ -43,7 +43,7 @@ input[type='text']:focus,
 input[type='tel']:focus {
   color: blanchedalmond;
 }
-.formButton {
+.formBtn {
   display: flex;
   justify-content: center;
   margin: 20px auto;
@@ -54,9 +54,9 @@ input[type='tel']:focus {
   color: blue;
   transition: background-color 0.3s, color 0.3s;
 }
-.formButton:hover,
-.formButton:focus,
-.formButton:active {
+.formBtn:hover,
+.formBtn:focus,
+.formBtn:active {
   background-color: darkblue;
   color: blanchedalmond;
 }

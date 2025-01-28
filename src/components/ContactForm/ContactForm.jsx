@@ -46,7 +46,13 @@ const ContactForm = () => {
           <label htmlFor="name" className={styles.fieldLabel}>
             Name
           </label>
-          <Field type="text" name="name" id="name" className={styles.field} />
+          <Field
+            type="text"
+            name="name"
+            id="name"
+            className={styles.field}
+            autoComplete="off"
+          />
           <ErrorMessage
             name="name"
             component="p"
@@ -63,6 +69,7 @@ const ContactForm = () => {
             name="number"
             id="number"
             className={styles.field}
+            autoComplete="off"
           />
           <ErrorMessage
             name="number"

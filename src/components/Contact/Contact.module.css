@@ -1,10 +1,14 @@
 .mainWrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
   flex-direction: row;
   border: solid 2px yellow;
-  width: 275px;
+
   height: 70px;
   background-color: blanchedalmond;
+  border-radius: 10px;
 }
 .contactWrapper {
   display: flex;
