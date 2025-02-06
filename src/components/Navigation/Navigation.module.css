@@ -1,0 +1,16 @@
+.link {
+  display: infline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 30px;
+  color: blue;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.link:active,
+.link:hover,
+.link:focus {
+  color: blanchedalmond;
+}

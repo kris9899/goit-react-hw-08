@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import styles from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,7 @@ const ContactForm = () => {
       .max(50, 'Too Long!')
       .required('Required'),
     number: Yup.string()
-      .min(3, 'Too Short!')
-      .max(50, 'Too Long!')
+      .matches(/^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/, 'Invalid phone number')
       .required('Required'),
   });
 
@@ -63,7 +62,7 @@ const ContactForm = () => {
             Number
           </label>
           <Field
-            type="text"
+            type="tel"
             name="number"
             id="number"
             className={styles.field}

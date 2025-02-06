@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.username {
+  color: blanchedalmond;
+  font-weight: 700;
+  font-size: 30px;
+}
+.userBtn {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  min-width: 100px;
+  height: 40px;
+  border: solid 2px blue;
+  border-radius: 8px;
+  background-color: lightblue;
+  color: blue;
+  transition: background-color 0.3s, color 0.3s;
+}
+.userBtn:hover,
+.userBtn:focus,
+.userBtn:active {
+  background-color: darkblue;
+  color: blanchedalmond;
+}

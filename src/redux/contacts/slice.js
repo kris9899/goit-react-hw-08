@@ -1,5 +1,6 @@
-import { createSelector, createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from './contactsOps';
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchContacts, addContact, deleteContact } from './operations';
+import { logoutThunk } from '../auth/operations';
 
 const initialState = {
   items: [],
@@ -42,20 +43,13 @@ const contactsSlice = createSlice({
           contact => contact.id !== action.payload.id
         );
       })
-      .addCase(deleteContact.rejected, handleRejected);
+      .addCase(deleteContact.rejected, handleRejected)
+      .addCase(logoutThunk.fulfilled, state => {
+        state.items = [];
+        state.isLoadingloading = false;
+        state.error = null;
+      });
   },
 });
 
 export default contactsSlice.reducer;
-
-export const selectContacts = state => state.contacts.items;
-export const selectFilters = state => state.filters.name;
-
-export const selectFilteredContacts = createSelector(
-  [selectContacts, selectFilters],
-  (contacts, filters) => {
-    return contacts.filter(item =>
-      item.name.trim().toLowerCase().includes(filters.trim().toLowerCase())
-    );
-  }
-);

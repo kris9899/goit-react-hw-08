@@ -5,10 +5,10 @@
   margin: 50px auto;
   flex-direction: row;
   border: solid 2px yellow;
-
   height: 70px;
   background-color: blanchedalmond;
   border-radius: 10px;
+  width: 400px;
 }
 .contactWrapper {
   display: flex;
@@ -21,7 +21,6 @@
   align-items: center;
   flex-wrap: nowrap;
   gap: 8px;
-
   font-size: 16px;
   font-weight: 400;
   color: blue;

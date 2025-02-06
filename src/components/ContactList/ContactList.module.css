@@ -7,3 +7,12 @@
   margin-left: 40px;
   margin-right: 40px;
 }
+.contactListInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: darkblue;
+  font-size: 30px;
+}
